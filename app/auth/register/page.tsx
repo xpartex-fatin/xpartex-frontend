@@ -56,8 +56,11 @@ const RegisterPage = () => {
         />
         {renderTitle()}
         <div className="flex mt-6 w-full text-neutral-700 flex-col mx-auto gap-4 max-w-sm">
-          <div>
-            {inputsConfig.map((field, idx) => renderInput(field, idx))}
+          <div className=" ">
+            <div className="flex flex-col gap-4">
+              {" "}
+              {inputsConfig.map((field, idx) => renderInput(field, idx))}
+            </div>
 
             <div className="flex lg:text-[16px] mt-2   text-sm items-start gap-1 w-full">
               <input type="checkbox" className="mt-1 cursor-pointer" />
