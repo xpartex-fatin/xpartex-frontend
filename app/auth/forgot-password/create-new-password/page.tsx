@@ -11,8 +11,8 @@ const CreateNewPasswordPage = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <div className="authBox p-4 lg:p-12 flex flex-col items-center text-center lg:rounded-2xl min-w-md   lg:bg-white bg-transparent">
-      <div className="flex lg:min-h-full w-full min-h-screen flex-col items-center justify-center">
+    <div className="authBox lg:p-12 flex flex-col items-center text-center lg:rounded-2xl w-full md:w-auto md:min-w-md   lg:bg-white bg-transparent">
+      <div className="flex lg:min-h-full w-full  flex-col items-center ">
         <Image
           src="/xpartex.svg"
           alt="Logo"
@@ -75,12 +75,12 @@ const CreateNewPasswordPage = () => {
               Submit
             </button>
             <div
-              onClick={() => router.push("/auth/forgot-password")}
+              onClick={() => router.push("/auth/forgot-password/otp")}
               className="cursor-pointer justify-center flex items-center font-bold gap-1 mt-4"
             >
               <IoIosArrowRoundBack size={25} />
               <span className="text-sm text-neutral-500">
-                Back to Forgot Password
+                Back to OTP
               </span>
             </div>
           </div>

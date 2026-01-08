@@ -24,7 +24,9 @@ export default function RootLayout({
     <html lang="en" className={notoSans.className}>
       <body >
         <LanguageProvider>
-          <LayoutWrapper>{children}</LayoutWrapper>
+          <LayoutWrapper>
+            {children}
+            </LayoutWrapper>
         </LanguageProvider>
       </body>
     </html>

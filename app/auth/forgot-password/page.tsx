@@ -6,7 +6,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 const page = () => {
   const router = useRouter();
   return (
-    <div className="authBox p-4 min-w-md  lg:p-12 flex flex-col items-center   text-center lg:rounded-2xl lg:bg-white bg-transparent">
+    <div className="authBox md:w-auto w-full md:min-w-md  lg:p-12 flex flex-col items-center   text-center lg:rounded-2xl lg:bg-white bg-transparent">
       <Image
         src="/xpartex.svg"
         alt="Logo"
