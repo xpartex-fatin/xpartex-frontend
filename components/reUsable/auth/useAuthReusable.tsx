@@ -79,7 +79,7 @@ export const useAuthReusable = ({
                   : "password"
                 : field.type || "text"
             }
-            className="w-full border border-neutral-300 bg-white lg:bg-transparent rounded-lg py-2 lg:py-2.5 px-3"
+            className="w-full border border-neutral-300 bg-white focus:outline-[#00BFFF] lg:bg-transparent rounded-lg py-2 lg:py-2.5 px-3"
             placeholder={capitalizeFirst(field.placeholder)}
             value={field.value}
             onChange={(e) => field.onChange?.(e.target.value)}
@@ -95,7 +95,11 @@ export const useAuthReusable = ({
               }
               className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400"
             >
-              {showPassword ? <EyeOff size={18} className="cursor-pointer"/> : <Eye size={18} className="cursor-pointer"/>}
+              {showPassword ? (
+                <EyeOff size={18} className="cursor-pointer" />
+              ) : (
+                <Eye size={18} className="cursor-pointer" />
+              )}
             </button>
           )}
         </div>
