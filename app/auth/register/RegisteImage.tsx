@@ -73,7 +73,6 @@ export const RegisterImage = memo(() => {
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-black/80" />
-
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8 z-10">
               <div className="mb-4">
                 <Rating
@@ -83,7 +82,7 @@ export const RegisterImage = memo(() => {
                 />
               </div>
 
-              <p className="text-xl  leading-snug text-white max-w-xl mb-6">
+              <p className="text-xl leading-snug text-white max-w-xl mb-6">
                 {slide.quote}
               </p>
 
@@ -100,35 +99,35 @@ export const RegisterImage = memo(() => {
               <p className="text-white font-semibold">{slide.name}</p>
               <p className="text-neutral-300">{slide.role}</p>
               <p className="text-neutral-400 text-sm">{slide.company}</p>
-
-              <div className=" text-white mt-6 inset-x-0 bottom-8 flex items-center justify-center gap-20 z-20">
-                <IoIosArrowBack
-                  size={40}
-                  onClick={prev}
-                  className=" left-0  rounded-full p-2 cursor-pointer ml-4"
-                />
-
-                <div className="flex gap-2">
-                  {slides.map((_, idx) => (
-                    <span
-                      key={idx}
-                      className={`w-2 h-2 rounded-full cursor-pointer ${
-                        idx === current ? "bg-white" : "bg-neutral-400"
-                      }`}
-                      onClick={() => setCurrent(idx)}
-                    ></span>
-                  ))}
-                </div>
-
-                <IoIosArrowForward
-                  size={40}
-                  onClick={next}
-                  className=" right-0  rounded-full p-2 cursor-pointer mr-4"
-                />
-              </div>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="text-white  inset-x-0 bottom-8 flex items-center justify-center gap-20 z-20 absolute">
+        <IoIosArrowBack
+          size={40}
+          onClick={prev}
+          className="left-0 rounded-full p-2 cursor-pointer ml-4"
+        />
+
+        <div className="flex gap-2">
+          {slides.map((_, idx) => (
+            <span
+              key={idx}
+              className={`w-2 h-2 rounded-full cursor-pointer ${
+                idx === current ? "bg-white" : "bg-neutral-400"
+              }`}
+              onClick={() => setCurrent(idx)}
+            ></span>
+          ))}
+        </div>
+
+        <IoIosArrowForward
+          size={40}
+          onClick={next}
+          className="right-0 rounded-full p-2 cursor-pointer mr-4"
+        />
       </div>
     </div>
   );

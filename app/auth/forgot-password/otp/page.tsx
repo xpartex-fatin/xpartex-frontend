@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { useAuthReusable } from "@/components/reUsable/auth/useAuthReusable";
 
 const ForgotPasswordOtppage = () => {
   const router = useRouter();
@@ -33,18 +34,25 @@ const ForgotPasswordOtppage = () => {
     setOtp([...newOtp, "", "", "", "", ""].slice(0, 5));
     if (newOtp.length > 0) inputsRef.current[newOtp.length - 1]?.focus();
   };
-const handleKeyDown = (
-  e: React.KeyboardEvent<HTMLInputElement>,
-  index: number
-) => {
-  if (e.key === "Backspace" && otp[index] === "" && index > 0) {
-    inputsRef.current[index - 1]?.focus();
-  }
-};
 
-  const handleResend = () => {
-    setTimer(59);
+  const handleKeyDown = (
+    e: React.KeyboardEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    if (e.key === "Backspace" && otp[index] === "" && index > 0) {
+      inputsRef.current[index - 1]?.focus();
+    }
   };
+
+  const handleResend = () => setTimer(59);
+
+  const { renderTitle, renderButton } = useAuthReusable({
+    title: "OTP Verification",
+    subtitle: "We have sent a verification code to your email",
+    inputs: [], 
+    buttonText: "Verify",
+    onSubmit: () => router.push("/auth/forgot-password/create-new-password"),
+  });
 
   return (
     <div className="lg:p-12 flex flex-col items-center text-center lg:rounded-2xl lg:bg-white bg-transparent">
@@ -55,18 +63,20 @@ const handleKeyDown = (
         height={100}
         className="mb-2 lg:hidden"
       />
-      <p className="text-2xl lg:text-3xl font-semibold">OTP Verification</p>
-      <p className="text-sm lg:text-[16px] mt-2 text-neutral-500">
-        We have sent a verification code to your email
-      </p>
-      <div className="flex items-center gap-2 mt-1">
-        <span className="text-sm font-semibold text-neutral-700">
-          bulb**********ail.com
-        </span>
-        <button className="text-blue-500 text-sm font-medium">Change</button>
+      <div className="flex flex-col items-center">
+        {renderTitle()}
+
+        <div className="flex -mt-2 items-center gap-2">
+          <span className="text-sm font-semibold text-neutral-700">
+            bulb**********ail.com
+          </span>
+          <button className="text-blue-500 text-sm cursor-pointer font-medium">
+            Change
+          </button>
+        </div>
       </div>
 
-      <div className="flex w-full mx-auto justify-center gap-3 mt-6">  
+      <div className="flex w-full mx-auto justify-center gap-3 mt-6">
         {otp.map((digit, idx) => (
           <input
             key={idx}
@@ -83,12 +93,7 @@ const handleKeyDown = (
         ))}
       </div>
 
-      <button
-        onClick={() => router.push("/auth/forgot-password/create-new-password")}
-        className="signIn rounded-lg text-white font-semibold py-2.5 w-full mt-6 cursor-pointer"
-      >
-        Verify
-      </button>
+      <div className=" w-full max-w-sm">{renderButton()}</div>
 
       <div className="flex items-center gap-2 mt-4 text-sm">
         <span className="text-neutral-500">Didn’t get code?</span>
