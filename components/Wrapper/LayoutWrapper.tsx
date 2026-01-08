@@ -7,19 +7,18 @@ export const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
   const hideOnAuth = pathname.startsWith("/auth");
 
-  return (
-    <>
-      <div className={`${hideOnAuth ? "hidden lg:block" : ""}`}>
-        <Navbar />
-      </div>
+return (
+  <div className="min-h-screen flex flex-col">
+    <div className={`${hideOnAuth ? "hidden lg:block" : ""}`}>
+      <Navbar />
+    </div>
 
-      <div className=" flex flex-col justify-between">
-        {children}
-      </div>
+    <main className="flex-1">{children}</main>
 
-      <div className={`${hideOnAuth ? "hidden lg:block" : ""}`}>
-        <Footer />
-      </div>
-    </>
-  );
+    <div className={`${hideOnAuth ? "hidden lg:block" : ""}`}>
+      <Footer />
+    </div>
+  </div>
+);
+
 };

@@ -35,7 +35,7 @@ const LoginPage = () => {
   });
 
   return (
-    <div className="flex px-4 justify-center mx-auto lg:py-10 max-w-380 w-full">
+    <div className="flex px-4 min-h-screen lg:min-h-[80vh] items-center justify-center mx-auto lg:py-10 max-w-380 w-full">
       <LoginImage />
       <div className="flex lg:min-h-full w-full min-h-screen flex-col items-center justify-center">
         <Image
