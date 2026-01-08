@@ -47,8 +47,8 @@ const LoginPage = () => {
         />
         {renderTitle()}
 
-        <div className="flex mt-6 w-full text-neutral-700 flex-col mx-auto gap-4 max-w-sm">
-          {inputsConfig.map((field, idx) => renderInput(field, idx))}
+        <div className="flex mt-6 w-full text-neutral-700 flex-col mx-auto gap-2 max-w-sm">
+          <div className="flex flex-col gap-4">{inputsConfig.map((field, idx) => renderInput(field, idx))}</div>
           <div className="flex lg:text-[16px] text-sm items-center justify-between w-full max-w-sm">
             <div className="flex items-center gap-1">
               <input type="checkbox" className="cursor-pointer" />

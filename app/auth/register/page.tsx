@@ -63,7 +63,7 @@ const RegisterPage = () => {
             </div>
 
             <div className="flex lg:text-[16px] mt-2   text-sm items-start gap-1 w-full">
-              <input type="checkbox" className="mt-1 cursor-pointer" />
+              <input type="checkbox" className="lg:mt-1 mt-0.5  cursor-pointer" />
               <p className="text-[13px]">
                 I agree to the Xpartex &nbsp;
                 <span className="text-blue-500 cursor-pointer">
