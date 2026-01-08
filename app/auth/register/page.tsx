@@ -62,13 +62,13 @@ const RegisterPage = () => {
             <div className="flex lg:text-[16px] mt-2   text-sm items-start gap-1 w-full">
               <input type="checkbox" className="mt-1 cursor-pointer" />
               <p className="text-[13px]">
-                I agree to the Xpartex
+                I agree to the Xpartex &nbsp;
                 <span className="text-blue-500 cursor-pointer">
                   Terms & services
                 </span>
-                and
+                &nbsp; and
                 <span className="text-blue-500 cursor-pointer">
-                  Privacy Policy
+                  &nbsp; Privacy Policy
                 </span>
               </p>
             </div>
