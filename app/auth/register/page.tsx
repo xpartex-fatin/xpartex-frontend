@@ -56,54 +56,56 @@ const RegisterPage = () => {
         />
         {renderTitle()}
         <div className="flex mt-6 w-full text-neutral-700 flex-col mx-auto gap-4 max-w-sm">
-          {inputsConfig.map((field, idx) => renderInput(field, idx))}
+          <div>
+            {inputsConfig.map((field, idx) => renderInput(field, idx))}
 
-          <div className="flex lg:text-[16px] text-sm items-start gap-1 w-full mt-2">
-            <input type="checkbox" className="mt-1 cursor-pointer" />
-            <p className="text-[13px]">
-              I agree to the Xpartex{" "}
-              <span className="text-blue-500 cursor-pointer">
-                Terms & services
-              </span>{" "}
-              and{" "}
-              <span className="text-blue-500 cursor-pointer">
-                Privacy Policy
-              </span>
-            </p>
+            <div className="flex lg:text-[16px] mt-2   text-sm items-start gap-1 w-full">
+              <input type="checkbox" className="mt-1 cursor-pointer" />
+              <p className="text-[13px]">
+                I agree to the Xpartex
+                <span className="text-blue-500 cursor-pointer">
+                  Terms & services
+                </span>
+                and
+                <span className="text-blue-500 cursor-pointer">
+                  Privacy Policy
+                </span>
+              </p>
+            </div>
           </div>
 
           {renderButton()}
 
-         <div>
-           <div className=" flex items-center justify-center gap-2 max-w-sm">
-            <div className="w-20 h-px bg-neutral-200"></div>
-            <span className="text-neutral-300">Or</span>
-            <div className="w-20 h-px bg-neutral-200"></div>
+          <div>
+            <div className=" flex items-center justify-center gap-2 max-w-sm">
+              <div className="w-20 h-px bg-neutral-200"></div>
+              <span className="text-neutral-300">Or</span>
+              <div className="w-20 h-px bg-neutral-200"></div>
+            </div>
+            <div className="flex items-center justify-center gap-6  mt-6 ">
+              <Image
+                src="/auth/google.svg"
+                alt="Google"
+                width={30}
+                height={30}
+                className="rounded-lg cursor-pointer"
+              />
+              <Image
+                src="/auth/facebook.svg"
+                alt="Facebook"
+                width={30}
+                height={30}
+                className="rounded-lg cursor-pointer"
+              />
+              <Image
+                src="/auth/linkedin.svg"
+                alt="Linkedin"
+                width={30}
+                height={30}
+                className="rounded-lg cursor-pointer"
+              />
+            </div>
           </div>
-          <div className="flex items-center justify-center gap-6  mt-6 ">
-            <Image
-              src="/auth/google.svg"
-              alt="Google"
-              width={30}
-              height={30}
-              className="rounded-lg cursor-pointer"
-            />
-            <Image
-              src="/auth/facebook.svg"
-              alt="Facebook"
-              width={30}
-              height={30}
-              className="rounded-lg cursor-pointer"
-            />
-            <Image
-              src="/auth/linkedin.svg"
-              alt="Linkedin"
-              width={30}
-              height={30}
-              className="rounded-lg cursor-pointer"
-            />
-          </div>
-         </div>
 
           <div className="mt-5 lg:text-[16px] text-sm justify-center flex items-center gap-1">
             <p className="text-neutral-500">Already have an account?</p>
