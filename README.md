@@ -1,0 +1,1 @@
+git commit -m "XPART-101 Authentication(Static)"
