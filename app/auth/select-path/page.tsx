@@ -69,7 +69,7 @@ const SelectpathPage = () => {
   });
 
   return (
-    <div className="mx-auto flex flex-col w-full items-center min-h-screen lg:min-h-[80vh] justify-center px-4">
+    <div className="mx-auto pb-20 lg:pb-0 flex flex-col w-full items-center mt-[10vh] lg:mt-0 lg:min-h-[80vh] justify-center px-4">
       <p className="text-2xl lg:text-4xl text-center font-semibold">
         Available Things Only
       </p>
@@ -81,7 +81,7 @@ const SelectpathPage = () => {
         <span> Choose one to continue.</span>
       </div>
 
-      <div className="flex flex-col lg:flex-row max-w-3xl mx-auto w-full items-center gap-2 lg:gap-4 mt-5 lg:mt-8">
+      <div className="flex flex-col md:flex-row max-w-3xl mx-auto w-full items-center gap-2 lg:gap-4 mt-5 lg:mt-8">
         {cards.map((card) => {
           const isSelected = selectedId === card.id;
           return (
@@ -91,7 +91,7 @@ const SelectpathPage = () => {
               onClick={() =>
                 setSelectedId((prev) => (prev === card.id ? null : card.id))
               }
-              className={`w-full cursor-pointer rounded-xl border px-4 py-4 lg:py-5 text-left transition-all duration-300 bg-white ${
+              className={`lg:w-full w-60 cursor-pointer rounded-xl border px-4 py-4 lg:py-5 text-left transition-all duration-300 bg-white ${
                 isSelected
                   ? "border-[#00BFFF]"
                   : "border-neutral-100 hover:border-neutral-200"
@@ -101,7 +101,7 @@ const SelectpathPage = () => {
                 {card.icon && card.icon({ size: 48 })}
                 <div>
                   <p className=" sm:text-xl font-semibold">{card.title}</p>
-                  <p className="hidden sm:block text-sm text-neutral-500 mt-1">
+                  <p className="hidden md:block text-sm text-neutral-500 mt-1">
                     {card.description}
                   </p>
                 </div>
@@ -111,11 +111,11 @@ const SelectpathPage = () => {
         })}
       </div>
 
-      <div className="flex lg:flex-col items-center gap-1.5 lg:gap-2.5 w-full mt-0 lg:mt-8">
-        <div className="lg:px-4 w-full md:flex-1 md:max-w-38">
+      <div className="flex lg:flex-col items-center justify-center gap-1.5 lg:gap-2.5 w-full mt-0 lg:mt-8">
+        <div className="lg:px-4 w-full sm:flex-1 sm:max-w-38">
           {renderButton()}
         </div>
-        <div className="lg:px-4 w-full md:flex-1 md:max-w-38">
+        <div className="lg:px-4 w-full sm:flex-1 sm:max-w-38">
           <button
             onClick={() => router.push("/")}
             className="rounded-lg border text-sm lg:text-[16px] cursor-pointer text-neutral-600 border-neutral-100 bg-white mt-4 lg:mt-0  lg:font-semibold lg:py-3 py-2.5 transition-all duration-300 w-full"
