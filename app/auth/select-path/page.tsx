@@ -77,7 +77,7 @@ const SelectpathPage = () => {
         <span className="hidden md:inline">
           These are the features currently available on the platform.
         </span>
-      
+
         <span> Choose one to continue.</span>
       </div>
 
@@ -101,7 +101,7 @@ const SelectpathPage = () => {
                 {card.icon && card.icon({ size: 48 })}
                 <div>
                   <p className=" sm:text-xl font-semibold">{card.title}</p>
-                  <p className="hidden md:block text-sm text-neutral-500 mt-1">
+                  <p className="hidden lg:block text-sm text-neutral-500 mt-1">
                     {card.description}
                   </p>
                 </div>
@@ -111,7 +111,7 @@ const SelectpathPage = () => {
         })}
       </div>
 
-      <div className="flex lg:flex-col items-center justify-center gap-1.5 lg:gap-2.5 w-full mt-0 lg:mt-8">
+      <div className="flex lg:flex-col items-center justify-center gap-1.5 lg:gap-2.5 w-60  lg:w-full mt-0 lg:mt-8">
         <div className="lg:px-4 w-full sm:flex-1 sm:max-w-38">
           {renderButton()}
         </div>
