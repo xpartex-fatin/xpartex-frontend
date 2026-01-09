@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { LoginImage } from "./LoginImage";
 import { useAuthReusable } from "@/components/reUsable/auth/useAuthReusable";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -31,7 +33,10 @@ const LoginPage = () => {
     subtitle: "please enter your login credentials to continue",
     inputs: inputsConfig,
     buttonText: "Sign In",
-    onSubmit: () => console.log("Login clicked", { email, password }),
+    onSubmit: () => {
+      console.log("Login clicked", { email, password });
+      router.push("/auth/select-path"); 
+    },
   });
 
   return (

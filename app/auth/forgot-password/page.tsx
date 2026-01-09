@@ -11,7 +11,7 @@ const ForgotPasswordPage = () => {
 
   const inputsConfig = [
     {
-      label: "", // leave blank so reusable input doesn't render its label
+      label: "", 
       placeholder: "Enter Your Email",
       type: "email" as const,
       value: email,

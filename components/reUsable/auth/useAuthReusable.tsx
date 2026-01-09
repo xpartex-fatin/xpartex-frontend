@@ -110,7 +110,7 @@ export const useAuthReusable = ({
   const renderButton = () => (
     <button
       onClick={onSubmit}
-      className="signIn rounded-lg text-white font-semibold py-2.5 w-full mt-4 cursor-pointer"
+      className="signIn text-sm lg:text-[16px] rounded-lg text-white lg:font-semibold lg:py-3 py-2.5 w-full mt-4 cursor-pointer"
     >
       {buttonText}
     </button>
