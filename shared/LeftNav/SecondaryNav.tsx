@@ -55,7 +55,7 @@ const SecondaryNav = () => {
       <div className="flex hover:bg-neutral-100 transition-all font-semibold duration-300 px-4 items-center py-2 rounded-lg text-[#00BFFF] cursor-pointer w-full justify-between">
         <div className="flex items-center gap-2">
           <IoHomeOutline className="text-2xl" />
-          <p>Home</p>
+          <p className="">Home</p>
         </div>
         <IoIosArrowDown className="text-xl" />
       </div>
@@ -85,7 +85,7 @@ const SecondaryNav = () => {
                 <div className="self-stretch w-px bg-neutral-300"></div>
                 <div className="space-y-2">
                   {items.map((item) => (
-                    <p key={item} className="cursor-pointer">
+                    <p key={item} className="cursor-pointer hover:font-semibold transition-all duration-300">
                       {item}
                     </p>
                   ))}
