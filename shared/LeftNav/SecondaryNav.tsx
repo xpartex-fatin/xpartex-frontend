@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, memo } from "react";
 import { IoHomeOutline, IoSettingsOutline } from "react-icons/io5";
 import { GiAutoRepair } from "react-icons/gi";
 import { LuUserRound } from "react-icons/lu";
@@ -10,6 +10,8 @@ import { BriefcaseBusiness } from "lucide-react";
 import { BsBoxSeam } from "react-icons/bs";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { IoIosArrowDown } from "react-icons/io";
+import Image from "next/image";
+import drawerToggle from "@/public/auth/drawerToogle.svg";
 
 const SecondaryNav = () => {
   const [openKey, setOpenKey] = useState<string | null>("service");
@@ -50,8 +52,22 @@ const SecondaryNav = () => {
     []
   );
 
+  const DrawerToggleButton = memo(() => {
+    return (
+      <div className="absolute top-2 -right-2 cursor-pointer rotate-180">
+        <Image
+          src={drawerToggle}
+          alt="Drawer Toggle"
+          width={32}
+          height={32}
+          className="rounded-lg w-6 bg-white"
+        />
+      </div>
+    );
+  });
   return (
-    <div className="bg-white px-1 py-3 w-full rounded-r-xl flex flex-col gap-1">
+    <div className="bg-white min-w-60 px-1 py-5 w-full rounded-r-xl flex relative flex-col gap-1">
+      {DrawerToggleButton && <DrawerToggleButton />}
       <div className="flex hover:bg-neutral-100 transition-all font-semibold duration-300 px-4 items-center py-2 rounded-lg text-[#00BFFF] cursor-pointer w-full justify-between">
         <div className="flex items-center gap-2">
           <IoHomeOutline className="text-2xl" />
@@ -85,7 +101,10 @@ const SecondaryNav = () => {
                 <div className="self-stretch w-px bg-neutral-300"></div>
                 <div className="space-y-2">
                   {items.map((item) => (
-                    <p key={item} className="cursor-pointer hover:font-semibold transition-all duration-300">
+                    <p
+                      key={item}
+                      className="cursor-pointer hover:font-semibold transition-all duration-300"
+                    >
                       {item}
                     </p>
                   ))}

@@ -47,7 +47,7 @@ const ProfileLayoutPage = () => {
         ref={containerRef}
         className="flex items-start max-w-380 px-4 pb-20 justify-center mx-auto gap-6 mt-24 w-full"
       >
-        <div className="sticky  top-24 mt-5 lg:mt-0 w-full min-w-40 max-w-75  w-fu rounded-xl shadow flex flex-row gap-0">
+        <div className="sticky hidden  top-24 mt-5 lg:mt-0  rounded-xl shadow lg:flex flex-row gap-0">
           <PrimaryNav />
           <SecondaryNav />
         </div>
