@@ -69,7 +69,7 @@ const SelectpathPage = () => {
   });
 
   return (
-    <div className="mx-auto pb-20 lg:pb-0 flex flex-col w-full items-center mt-[10vh] lg:mt-0 lg:min-h-[80vh] justify-center px-4">
+    <div className="mx-auto pb-20 lg:pb-0 flex flex-col w-full items-center mt-[10vh] lg:mt-0 lg:min-h-[90vh] justify-center px-4">
       <p className="text-2xl lg:text-4xl text-center font-semibold">
         Available Things Only
       </p>

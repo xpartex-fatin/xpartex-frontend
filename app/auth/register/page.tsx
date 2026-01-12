@@ -44,7 +44,7 @@ const RegisterPage = () => {
   });
 
   return (
-    <div className="flex px-4 min-h-screen lg:min-h-[80vh] items-center justify-center mx-auto lg:py-10 max-w-380 w-full">
+    <div className="flex px-4 min-h-screen lg:min-h-[90vh] mt-0 lg:mt-18   items-center justify-center mx-auto lg:py-10 max-w-380 w-full">
       <RegisterImage />
       <div className="flex  w-full items-center justify-center flex-col ">
         <Image

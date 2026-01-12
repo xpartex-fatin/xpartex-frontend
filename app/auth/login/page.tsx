@@ -40,7 +40,7 @@ const LoginPage = () => {
   });
 
   return (
-    <div className="flex px-4 min-h-screen lg:min-h-[80vh] items-center justify-center mx-auto lg:py-10 max-w-380 w-full">
+    <div className="flex px-4 min-h-screen mt-0 lg:mt-18 lg:min-h-[90vh] items-center justify-center mx-auto lg:py-10 max-w-380 w-full">
       <LoginImage />
       <div className="flex lg:min-h-full w-full min-h-screen flex-col items-center justify-center">
         <Image
@@ -53,7 +53,9 @@ const LoginPage = () => {
         {renderTitle()}
 
         <div className="flex mt-6 w-full text-neutral-700 flex-col mx-auto gap-2 max-w-sm">
-          <div className="flex flex-col gap-4">{inputsConfig.map((field, idx) => renderInput(field, idx))}</div>
+          <div className="flex flex-col gap-4">
+            {inputsConfig.map((field, idx) => renderInput(field, idx))}
+          </div>
           <div className="flex lg:text-[16px] text-sm items-center justify-between w-full max-w-sm">
             <div className="flex items-center gap-1">
               <input type="checkbox" className="cursor-pointer" />
