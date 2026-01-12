@@ -23,7 +23,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Start search here..."
-                className="pl-10 pr-3 py-2.5 w-90 rounded-lg border border-neutral-400 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                className="pl-10 pr-3 py-2.5 lg:w-90 rounded-lg border border-neutral-400 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
               />
             </div>
           )}
