@@ -31,7 +31,7 @@ const MoreProfiles = () => {
             <p className="text-neutral-700 text-sm font-light">
               {truncate(user.designation, 20)}
             </p>
-            <div className="border mt-2 flex items-center gap-1.5 text-neutral-700 border-neutral-400 rounded-full py-0.5 cursor-pointer px-4">
+            <div className="border mt-2 flex items-center gap-1.5 text-neutral-700 border-neutral-400 rounded-full py-1 cursor-pointer px-3.5">
               <TbUserPlus />
               <p>Follow</p>
             </div>
@@ -43,4 +43,3 @@ const MoreProfiles = () => {
 };
 
 export default MoreProfiles;
-  
