@@ -15,7 +15,7 @@ const MoreProfiles = () => {
     text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 
   return (
-    <div className="bg-white top-24 max-h-[85vh] sticky rounded-xl shadow p-5 mt-5 w-full flex flex-col gap-4 overflow-auto">
+    <div className="bg-white top-24 max-h-[86.5vh] sticky rounded-xl shadow p-5 mt-5 w-full flex flex-col gap-4 overflow-auto">
       <p className="text-[#00BFFF] font-semibold">More profiles for you</p>
       {users.map((user) => (
         <div key={user.id} className="flex items-start gap-2">

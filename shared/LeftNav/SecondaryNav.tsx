@@ -81,10 +81,12 @@ const SecondaryNav = () => {
 
         return (
           <div key={key}>
+            
             <div
               onClick={() => setOpenKey(isOpen ? null : key)}
               className="flex hover:bg-neutral-100 transition-all duration-300 px-4 items-center py-2 rounded-lg text-neutral-600 cursor-pointer w-full justify-between"
             >
+         
               <div className="flex font-medium items-center gap-2">
                 <Icon className="text-2xl" />
                 <p>{title}</p>

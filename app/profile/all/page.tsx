@@ -1,11 +1,13 @@
 "use client";
+import ProfileAbout from "@/components/profile/ProfileAbout";
 import PrimaryNav from "@/shared/LeftNav/PrimaryNav";
 import SecondaryNav from "@/shared/LeftNav/SecondaryNav";
+import ProfileBanner from "@/shared/profile/ProfileBanner";
 import ContactInfo from "@/shared/RightNav/ContactInfo";
 import MoreProfiles from "@/shared/RightNav/MoreProfiles";
 import { useEffect, useRef, useState } from "react";
 
-const posts = Array.from({ length: 20 }).map((_, i) => ({
+const posts = Array.from({ length: 10 }).map((_, i) => ({
   id: i + 1,
   title: `Post ${i + 1}`,
   content: `This is post number ${i + 1}.`,
@@ -55,14 +57,9 @@ const ProfileLayoutPage = () => {
         </div>
 
         <div className="flex flex-col w-full gap-5">
-          {posts.map((post) => (
-            <div
-              key={post.id}
-              className="shadow rounded-xl bg-white p-4 h-96 flex flex-col justify-start">
-              <h2 className="font-semibold text-lg mb-2">{post.title}</h2>
-              <p className="text-sm text-neutral-700">{post.content}</p>
-            </div>
-          ))}
+          <ProfileBanner />
+          <ProfileAbout/>
+       
         </div>
 
         <div className="relative hidden lg:block min-w-65 self-stretch pb-10" style={rightStyle}>
