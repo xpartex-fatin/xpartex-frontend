@@ -65,7 +65,7 @@ const ProfileLayoutPage = () => {
           ))}
         </div>
 
-        <div className="relative  min-w-65 self-stretch pb-10" style={rightStyle}>
+        <div className="relative hidden lg:block min-w-65 self-stretch pb-10" style={rightStyle}>
          <ContactInfo/>
           <MoreProfiles />
         </div>
