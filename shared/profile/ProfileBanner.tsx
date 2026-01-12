@@ -37,9 +37,9 @@ const ProfileBanner = () => {
           <UserAvatar />
           <div className="w-full justify-between flex">
             <div>
-              <p className="text-2xl font-semibold">Faysal Ahmed</p>
+              <p className="text-2xl font-semibold">Mostofa Fatin</p>
               <p className="mt-1 text-neutral-700">
-                QA Garment Technician, 3d Designer
+             Frontend Developer at Xpartex Ltd.
               </p>
 
               <div className="flex items-center gap-3">
