@@ -2,7 +2,7 @@ import OnlyLogo from "@/public/hooks/icon/OnlyLogo";
 
 const RootLoading = () => {
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
+     <div className="fixed inset-0 z-9999 top-0 flex flex-col items-center  pt-[30vh] bg-white">
       <div className="animate-pulse">
         <OnlyLogo />
       </div>
