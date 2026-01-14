@@ -1,5 +1,8 @@
 "use client";
 import ProfileAbout from "@/components/profile/ProfileAbout";
+import ProfileCertificate from "@/components/profile/ProfileCertificate";
+import ProfileEducation from "@/components/profile/ProfileEducation";
+import ProfileExperience from "@/components/profile/ProfileExperience";
 import PrimaryNav from "@/shared/LeftNav/PrimaryNav";
 import SecondaryNav from "@/shared/LeftNav/SecondaryNav";
 import ProfileBanner from "@/shared/profile/ProfileBanner";
@@ -29,10 +32,8 @@ const ProfileLayoutPage = () => {
       const topOffset = 96;
       const bottomOffset = 40;
       const maxTranslate =
-        containerRect.height - leftRef.current.offsetHeight - bottomOffset;
-
+      containerRect.height - leftRef.current.offsetHeight - bottomOffset;
       const scrollY = window.scrollY + topOffset - containerRect.top;
-
       const translate = Math.min(Math.max(scrollY, 0), maxTranslate);
 
       setLeftStyle({ transform: `translateY(${translate}px)` });
@@ -58,12 +59,17 @@ const ProfileLayoutPage = () => {
 
         <div className="flex flex-col w-full gap-5">
           <ProfileBanner />
-          <ProfileAbout/>
-       
+          <ProfileAbout />
+          <ProfileExperience/>
+          <ProfileEducation/>
+          <ProfileCertificate/>
         </div>
 
-        <div className="relative hidden lg:block min-w-65 self-stretch pb-10" style={rightStyle}>
-         <ContactInfo/>
+        <div
+          className="relative hidden lg:block min-w-65 self-stretch pb-10"
+          style={rightStyle}
+        >
+          <ContactInfo />
           <MoreProfiles />
         </div>
       </div>

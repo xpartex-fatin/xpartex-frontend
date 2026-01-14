@@ -69,7 +69,7 @@ const Navbar = () => {
                 alt="User"
                 width={60}
                 height={60}
-                className="object-cover object-center w-10 h-10 rounded-full border border-neutral-200"
+                className="object-cover cursor-pointer object-center w-10 h-10 rounded-full border border-neutral-200"
                 priority
               />
             </div>
