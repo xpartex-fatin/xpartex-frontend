@@ -39,7 +39,7 @@ const ProfileBanner = () => {
             <div>
               <p className="text-2xl font-semibold">Mostofa Fatin</p>
               <p className="mt-1 text-neutral-700">
-             Frontend Developer at Xpartex Ltd.
+                Frontend Developer at Xpartex Ltd.
               </p>
 
               <div className="flex items-center gap-3">
