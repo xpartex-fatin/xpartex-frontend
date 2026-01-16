@@ -1,5 +1,6 @@
 "use client";
 
+import Portfolio from "@/components/profile/portfolio/Portfolio";
 import PrimaryNav from "@/shared/LeftNav/PrimaryNav";
 import SecondaryNav from "@/shared/LeftNav/SecondaryNav";
 import ProfileBanner from "@/shared/profile/ProfileBanner";
@@ -56,6 +57,7 @@ const AboutLayoutPage = () => {
 
         <div className="flex flex-col w-full gap-5">
           <ProfileBanner />
+          <Portfolio />
         </div>
 
         <div
