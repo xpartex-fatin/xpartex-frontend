@@ -19,7 +19,7 @@ const PORTFOLIO_IMAGES = [
   "/portfolio/image-06.png",
 ];
 
-const SKILLS = ["3D Garment Modeling", "Pattern Drafting & Cutting"];
+const SKILLS = ["3d Pattern Design", "Pattern Drafting & Cutting"];
 
 /*  COMPONENT   */
 
