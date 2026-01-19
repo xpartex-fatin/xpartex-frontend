@@ -1,5 +1,6 @@
 "use client";
 
+import DigitalProduct from "@/components/profile/products/DigitalProduct";
 import MyService from "@/components/profile/service/MyService";
 import PrimaryNav from "@/shared/LeftNav/PrimaryNav";
 import SecondaryNav from "@/shared/LeftNav/SecondaryNav";
@@ -14,7 +15,7 @@ const posts = Array.from({ length: 10 }).map((_, i) => ({
   content: `This is post number ${i + 1}.`,
 }));
 
-const ServiceLayoutPage = () => {
+const ProductLayoutPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -57,7 +58,7 @@ const ServiceLayoutPage = () => {
 
         <div className="flex flex-col w-full gap-5">
           <ProfileBanner />
-          <MyService />
+          <DigitalProduct />
         </div>
 
         <div
@@ -72,4 +73,4 @@ const ServiceLayoutPage = () => {
   );
 };
 
-export default ServiceLayoutPage;
+export default ProductLayoutPage;

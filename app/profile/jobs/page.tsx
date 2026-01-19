@@ -1,6 +1,6 @@
 "use client";
 
-import MyService from "@/components/profile/service/MyService";
+import Jobs from "@/components/profile/jobs/Jobs";
 import PrimaryNav from "@/shared/LeftNav/PrimaryNav";
 import SecondaryNav from "@/shared/LeftNav/SecondaryNav";
 import ProfileBanner from "@/shared/profile/ProfileBanner";
@@ -14,7 +14,7 @@ const posts = Array.from({ length: 10 }).map((_, i) => ({
   content: `This is post number ${i + 1}.`,
 }));
 
-const ServiceLayoutPage = () => {
+const JobsLayoutPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -57,7 +57,7 @@ const ServiceLayoutPage = () => {
 
         <div className="flex flex-col w-full gap-5">
           <ProfileBanner />
-          <MyService />
+          <Jobs />
         </div>
 
         <div
@@ -72,4 +72,4 @@ const ServiceLayoutPage = () => {
   );
 };
 
-export default ServiceLayoutPage;
+export default JobsLayoutPage;
