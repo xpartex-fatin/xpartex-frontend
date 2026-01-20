@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import { IoMdShare } from "react-icons/io";
-import { 
-  Briefcase, 
-  MapPin, 
-  GraduationCap, 
-  Clock, 
-  Users, 
+import {
+  Briefcase,
+  MapPin,
+  GraduationCap,
+  Clock,
+  Users,
   DollarSign,
   Calendar,
-  Target
+  Target,
 } from "lucide-react";
 
 // Types
@@ -46,7 +46,8 @@ const jobsData: JobsData = {
         title: "3d Designer (Garments CAD)",
         location: "Fatullah, Narayanganj, Bangladesh",
         status: "Active",
-        requirements: "Bachelor's or Master's degree in Food Science, Food Technology, Chemistry, Applied Chemistry, Biotechnology, or related field",
+        requirements:
+          "Bachelor's or Master's degree in Food Science, Food Technology, Chemistry, Applied Chemistry, Biotechnology, or related field",
         jobType: "Full Time",
         experience: "1 to 3 year",
         vacancy: 5,
@@ -60,7 +61,8 @@ const jobsData: JobsData = {
         title: "Cutting Mater (Garments)",
         location: "Fatullah, Narayanganj, Bangladesh",
         status: "Active",
-        requirements: "Bachelor's or Master's degree in Food Science, Food Technology, Chemistry, Applied Chemistry, Biotechnology, or related field",
+        requirements:
+          "Bachelor's or Master's degree in Food Science, Food Technology, Chemistry, Applied Chemistry, Biotechnology, or related field",
         jobType: "Full Time",
         experience: "1 to 3 year",
         vacancy: 5,
@@ -74,7 +76,8 @@ const jobsData: JobsData = {
         title: "Quality Control Inspector",
         location: "Savar, Dhaka, Bangladesh",
         status: "Active",
-        requirements: "Bachelor's degree in Textile Engineering or related field with strong attention to detail",
+        requirements:
+          "Bachelor's degree in Textile Engineering or related field with strong attention to detail",
         jobType: "Full Time",
         experience: "2 to 4 year",
         vacancy: 3,
@@ -88,7 +91,8 @@ const jobsData: JobsData = {
         title: "Pattern Maker",
         location: "Gazipur, Dhaka, Bangladesh",
         status: "Active",
-        requirements: "Diploma or Bachelor's in Fashion Design with expertise in pattern making software",
+        requirements:
+          "Diploma or Bachelor's in Fashion Design with expertise in pattern making software",
         jobType: "Full Time",
         experience: "3 to 5 year",
         vacancy: 2,
@@ -104,7 +108,8 @@ const jobsData: JobsData = {
         title: "Freelance Fashion Designer",
         location: "Dhaka, Bangladesh",
         status: "Active",
-        requirements: "Portfolio showcasing fashion design work and proficiency in design software",
+        requirements:
+          "Portfolio showcasing fashion design work and proficiency in design software",
         jobType: "Part Time",
         experience: "1 to 2 year",
         vacancy: 10,
@@ -118,7 +123,8 @@ const jobsData: JobsData = {
         title: "Embroidery Specialist (Part Time)",
         location: "Mirpur, Dhaka, Bangladesh",
         status: "Active",
-        requirements: "Experience in hand or machine embroidery with creative design skills",
+        requirements:
+          "Experience in hand or machine embroidery with creative design skills",
         jobType: "Part Time",
         experience: "2 to 3 year",
         vacancy: 4,
@@ -128,13 +134,14 @@ const jobsData: JobsData = {
         deadline: "10-Nov-2025",
       },
     ],
-    "Remote": [
+    Remote: [
       {
         id: 7,
         title: "Remote CAD Designer",
         location: "Remote, Bangladesh",
         status: "Active",
-        requirements: "Proficiency in CAD software for garment design, strong portfolio required",
+        requirements:
+          "Proficiency in CAD software for garment design, strong portfolio required",
         jobType: "Remote",
         experience: "2 to 4 year",
         vacancy: 3,
@@ -148,7 +155,8 @@ const jobsData: JobsData = {
         title: "Textile Consultant (Remote)",
         location: "Remote, Worldwide",
         status: "Active",
-        requirements: "Master's degree in Textile Engineering with consulting experience",
+        requirements:
+          "Master's degree in Textile Engineering with consulting experience",
         jobType: "Remote",
         experience: "5 to 7 year",
         vacancy: 2,
@@ -167,7 +175,7 @@ const Jobs = () => {
   const currentJobs = jobsData.jobs[activeTab] || [];
 
   return (
-    <div className="w-full rounded-xl bg-white p-6 shadow-lg">
+    <div className="w-full rounded-xl bg-white p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Jobs</h2>
@@ -269,7 +277,9 @@ const JobCard = ({ job }: { job: Job }) => {
         </div>
         <div className="flex items-center gap-2 text-gray-600">
           <Users size={16} className="text-gray-500" />
-          <span className="font-medium text-gray-900">{job.applicants} People applied</span>
+          <span className="font-medium text-gray-900">
+            {job.applicants} People applied
+          </span>
         </div>
       </div>
 
@@ -282,10 +292,9 @@ const JobCard = ({ job }: { job: Job }) => {
 
       {/* Footer - Apply Button and Deadline */}
       <div className="flex items-center gap-4">
-      
         <button className="flex-1 w-full text-md rounded-lg border-2 border-[#D8DBDF] py-2 font-semibold text-gray-700 transition-all hover:border-transparent hover:bg-linear-to-r hover:from-[#00BFFF] hover:to-[#40E0D0] hover:text-white">
-            Apply Now
-          </button>
+          Apply Now
+        </button>
         <div className="flex items-center gap-2 text-sm text-gray-600">
           <Calendar size={16} className="text-gray-500" />
           <span>Deadline: {job.deadline}</span>
