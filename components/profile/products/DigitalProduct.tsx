@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { IoMdShare } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
-import { BookOpen, FileText, Layers } from "lucide-react";
+import { FileText } from "lucide-react";
 import Image from "next/image";
 
 // Types
@@ -203,7 +203,7 @@ const DigitalProduct = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {currentProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -252,7 +252,7 @@ const ProductCard = ({ product }: { product: DigitalProduct }) => {
         </p>
 
         {/* Product Details Grid */}
-        <div className="mb-4 grid grid-cols-2 gap-3 text-sm">
+        <div className="mb-4 grid grid-cols-2 gap-1 text-sm">
           <div>
             <span className="text-gray-500">Format: </span>
             <span className="font-semibold text-gray-900">
@@ -277,7 +277,7 @@ const ProductCard = ({ product }: { product: DigitalProduct }) => {
 
         {/* Rating and Price */}
         <div className="mb-4 flex items-center justify-between border-t border-gray-100 pt-4">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1">
             <FaStar className="text-yellow-400" size={16} />
             <span className="font-bold text-gray-900">{product.rating}</span>
             <span className="text-sm text-gray-500">({product.reviews})</span>
@@ -289,7 +289,7 @@ const ProductCard = ({ product }: { product: DigitalProduct }) => {
             </span>
           </div>
         </div>
-        
+
         {/* Button */}
         <button className="mt-3 w-full rounded-lg border-2 border-[#D8DBDF] py-2 font-medium text-gray-700 transition-all hover:border-transparent hover:bg-gradient-to-r hover:from-[#00BFFF] hover:to-[#40E0D0] hover:text-white">
           {product.buttonName}

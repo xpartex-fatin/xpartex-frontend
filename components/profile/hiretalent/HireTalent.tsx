@@ -241,7 +241,7 @@ const TalentCard = ({ talent }: { talent: Talent }) => {
 
   return (
     <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg">
-      <div className="p-5">
+      <div className="p-3">
         {/* Header with Avatar and Status */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -325,21 +325,21 @@ const TalentCard = ({ talent }: { talent: Talent }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 lg:gap-2">
           <button
             onClick={() => setIsBookmarked(!isBookmarked)}
             className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-gray-200 text-gray-600 hover:border-[#00BFFF] hover:text-[#00BFFF] transition-all"
           >
             {isBookmarked ? (
-              <FaBookmark size={16} className="text-[#00BFFF]" />
+              <FaBookmark size={14} className="text-[#00BFFF]" />
             ) : (
-              <FaRegBookmark size={16} />
+              <FaRegBookmark size={14} />
             )}
           </button>
-          <button className="flex-1 w-full text-md rounded-lg border-2 border-[#D8DBDF] py-2 font-semibold text-gray-700 transition-all hover:border-transparent hover:bg-linear-to-r hover:from-[#00BFFF] hover:to-[#40E0D0] hover:text-white">
+          <button className="flex-1 w-full text-sm rounded-lg border-2 border-[#D8DBDF] py-2 font-semibold text-gray-700 transition-all hover:border-transparent hover:bg-linear-to-r hover:from-[#00BFFF] hover:to-[#40E0D0] hover:text-white">
             Contact Me
           </button>
-          <button className="flex-1 text-md rounded-lg bg-linear-to-r from-[#00BFFF] to-[#40E0D0] py-2 font-semibold text-white shadow-md transition-all hover:shadow-lg hover:opacity-90 active:scale-95">
+          <button className="flex-1 text-sm rounded-lg bg-linear-to-r from-[#00BFFF] to-[#40E0D0] py-2 font-semibold text-white shadow-md transition-all hover:shadow-lg hover:opacity-90 active:scale-95">
             Schedule Now
           </button>
         </div>

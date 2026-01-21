@@ -60,7 +60,7 @@ const Header = () => (
 );
 
 const Banner = () => (
-  <div className="relative mt-4 h-[157px] w-[756px] overflow-hidden rounded-lg">
+  <div className="relative mt-4 h-[157px] w-full overflow-hidden rounded-lg">
     <Image
       src="/portfolio/protfolio-banner.png"
       alt="Portfolio banner"
@@ -146,7 +146,7 @@ const PortfolioGrid = () => (
 );
 
 const PortfolioItem = ({ image }: { image: string }) => (
-  <div className="group relative h-[218px] w-[230px] overflow-hidden rounded-lg shadow-sm">
+  <div className="group relative h-auto w-full overflow-hidden rounded-lg shadow-sm">
     <Image
       src={image}
       alt="Portfolio item"

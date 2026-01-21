@@ -192,7 +192,7 @@ const Jobs = () => {
             onClick={() => setActiveTab(tab)}
             className={`rounded-lg px-6 py-2.5 text-sm font-medium transition-all ${
               activeTab === tab
-                ? "bg-gradient-to-r from-[#00BFFF] to-[#40E0D0] text-white shadow-md"
+                ? "bg-linear-to-r from-[#00BFFF] to-[#40E0D0] text-white shadow-md"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
           >

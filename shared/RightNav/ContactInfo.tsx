@@ -8,7 +8,7 @@ import {
 
 const ContactInfo = () => {
   return (
-    <div className="bg-white rounded-xl shadow p-5     w-full">
+    <div className="bg-white rounded-xl shadow p-5">
       <p className="text-[#00BFFF]">Contact Information</p>
 
       <div className="mt-5">
